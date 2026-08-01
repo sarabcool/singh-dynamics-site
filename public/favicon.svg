@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Singh Dynamics">
+  <!-- Paper stock, matching the site background -->
+  <rect width="64" height="64" fill="#fbf7ee"/>
+  <!-- Red stamp box, rotated like the one on the page -->
+  <g transform="rotate(-2.2 32 32)">
+    <rect x="6" y="12" width="52" height="40" fill="none" stroke="#b4231b" stroke-width="5"/>
+    <text x="32" y="41.5"
+          font-family="Oswald, 'Arial Narrow', Impact, sans-serif"
+          font-size="26" font-weight="700" letter-spacing="1"
+          text-anchor="middle" fill="#b4231b">SD</text>
+  </g>
+</svg>
