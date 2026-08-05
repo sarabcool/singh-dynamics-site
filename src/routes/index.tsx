@@ -139,12 +139,12 @@ const PAGE_CSS = `
     }
   }
 
-  .wrap { max-width: 1100px; margin: 0 auto; padding-left: var(--padX); padding-right: var(--padX); }
-  .narrow { max-width: 680px; margin: 0 auto; padding-left: var(--padX); padding-right: var(--padX); }
+  .wrap { max-width: 1280px; margin: 0 auto; padding-left: var(--padX); padding-right: var(--padX); }
+  .narrow { max-width: 820px; margin: 0 auto; padding-left: var(--padX); padding-right: var(--padX); }
   .sec { padding-top: var(--secY); }
 
   header {
-    max-width: 1100px; margin: 0 auto;
+    max-width: 1280px; margin: 0 auto;
     padding: 22px var(--padX);
     display: flex; align-items: center; justify-content: space-between;
   }
@@ -242,7 +242,7 @@ const PAGE_CSS = `
     margin-top: 44px; max-width: 680px; margin-left: auto; margin-right: auto;
     display: grid; grid-template-columns: 1fr; gap: var(--gridGap);
   }
-  @media (min-width: 1024px) { .grid { grid-template-columns: 1fr 1fr; max-width: 900px; } }
+  @media (min-width: 1024px) { .grid { grid-template-columns: 1fr 1fr; max-width: 1080px; } }
   .gh { font-size: 17px; font-weight: 600; }
   .gp { margin: 8px 0 0; max-width: 420px; font-size: 16px; line-height: 1.55; color: #6e6e73; }
 
@@ -256,7 +256,7 @@ const PAGE_CSS = `
 
   .faq { margin-top: 44px; display: flex; flex-direction: column; gap: 34px; }
   .fq { font-size: 17px; font-weight: 600; }
-  .fa { margin: 8px 0 0; font-size: 16px; line-height: 1.55; color: #6e6e73; }
+  .fa { margin: 8px 0 0; max-width: 62ch; font-size: 16px; line-height: 1.55; color: #6e6e73; }
 
   .contactTel { font-size: 30px; font-weight: 600; letter-spacing: -0.02em; color: #1d1d1f; }
   .contactTel:hover { color: var(--accent); }
@@ -265,7 +265,7 @@ const PAGE_CSS = `
   .mailRow { margin-top: 10px; display: flex; flex-direction: column; gap: 6px; align-items: center; }
 
   footer {
-    max-width: 1100px; margin: 0 auto;
+    max-width: 1280px; margin: 0 auto;
     padding: 64px var(--padX) 56px;
     text-align: center; font-size: 13px; color: #86868b;
   }
