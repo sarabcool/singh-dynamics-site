@@ -21,5 +21,5 @@ jobs:
           node-version: '22'
       - run: npm install --no-audit --no-fund
       - name: Lint code (ignore existing Prettier debt)
-        run: npx eslint . --rule 'prettier/prettier: off'
+        run: "npx eslint . --rule 'prettier/prettier: off'"
       - run: npm run build
