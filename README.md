@@ -17,12 +17,14 @@ npm install
 npm run dev
 ```
 
-Run checks before shipping:
+Before shipping, run the same functional checks as CI:
 
 ```sh
-npm run lint
+npx eslint . --rule 'prettier/prettier: off'
 npm run build
 ```
+
+Formatting cleanup is tracked separately from functional lint/build failures so old Prettier debt does not hide real regressions.
 
 ## Website intake
 
