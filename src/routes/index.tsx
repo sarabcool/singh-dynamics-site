@@ -71,6 +71,23 @@ export const Route = createFileRoute("/")({
 });
 
 const PAGE_CSS = `
+  /* ---- undo the Work Order theme -------------------------------------------
+     styles.css still ships, because __root.tsx's 404 and error screens are
+     built on its Tailwind tokens and would lose all styling without it. But its
+     @layer base sets h1..h3 to Oswald, 700, uppercase, which is the old design.
+     This page is sentence case in the body face, and its own heading rules only
+     declare size, weight and tracking, so there is nothing here to override the
+     inherited family or the uppercasing. They have to be undone by name.
+     Declared early on purpose: the design's own h1/h2 rules come later in this
+     block and win for the properties they actually set. ------------------- */
+  h1, h2, h3 {
+    font-family: inherit;
+    text-transform: none;
+    letter-spacing: normal;
+    line-height: 1.15;
+    font-weight: 600;
+  }
+
   *, *::before, *::after { box-sizing: border-box; }
   html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
   body {
