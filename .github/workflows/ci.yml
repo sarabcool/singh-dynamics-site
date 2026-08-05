@@ -1,6 +1,9 @@
 name: ci
 
 on:
+  push:
+    branches:
+      - 'agent/intake-and-site-cleanup'
   pull_request:
   workflow_dispatch:
 
