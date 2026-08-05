@@ -139,12 +139,12 @@ const PAGE_CSS = `
     }
   }
 
-  .wrap { max-width: 1280px; margin: 0 auto; padding-left: var(--padX); padding-right: var(--padX); }
-  .narrow { max-width: 820px; margin: 0 auto; padding-left: var(--padX); padding-right: var(--padX); }
+  .wrap { max-width: 1440px; margin: 0 auto; padding-left: var(--padX); padding-right: var(--padX); }
+  .narrow { max-width: 940px; margin: 0 auto; padding-left: var(--padX); padding-right: var(--padX); }
   .sec { padding-top: var(--secY); }
 
   header {
-    max-width: 1280px; margin: 0 auto;
+    max-width: 1440px; margin: 0 auto;
     padding: 22px var(--padX);
     display: flex; align-items: center; justify-content: space-between;
   }
@@ -183,7 +183,7 @@ const PAGE_CSS = `
   @media (min-width: 768px) { .heroText { max-width: 600px; } }
   @media (min-width: 1024px) {
     .hero { flex-direction: row; align-items: center; }
-    .heroText { max-width: 520px; text-align: left; align-items: flex-start; }
+    .heroText { max-width: 640px; text-align: left; align-items: flex-start; }
   }
 
   /* ---- phone mockup ---- */
@@ -242,7 +242,7 @@ const PAGE_CSS = `
     margin-top: 44px; max-width: 680px; margin-left: auto; margin-right: auto;
     display: grid; grid-template-columns: 1fr; gap: var(--gridGap);
   }
-  @media (min-width: 1024px) { .grid { grid-template-columns: 1fr 1fr; max-width: 1080px; } }
+  @media (min-width: 1024px) { .grid { grid-template-columns: 1fr 1fr; max-width: 1200px; } }
   .gh { font-size: 17px; font-weight: 600; }
   .gp { margin: 8px 0 0; max-width: 420px; font-size: 16px; line-height: 1.55; color: #6e6e73; }
 
@@ -265,7 +265,7 @@ const PAGE_CSS = `
   .mailRow { margin-top: 10px; display: flex; flex-direction: column; gap: 6px; align-items: center; }
 
   footer {
-    max-width: 1280px; margin: 0 auto;
+    max-width: 1440px; margin: 0 auto;
     padding: 64px var(--padX) 56px;
     text-align: center; font-size: 13px; color: #86868b;
   }
