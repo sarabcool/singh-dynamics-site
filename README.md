@@ -1,29 +1,45 @@
-# Welcome to your Lovable project
+# Singh Dynamics website
 
-This project was built with [Lovable](https://lovable.dev).
+Public sales site for Singh Dynamics.
 
-## Build with Lovable
+## Stack
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- TanStack Start
+- React 19
+- TypeScript
+- Tailwind CSS
+- Vite
 
 ## Development
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+npm install
 npm run dev
 ```
 
-## Built with
+Before shipping, run the same functional checks as CI:
 
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
+```sh
+npx eslint . --rule 'prettier/prettier: off'
+npm run build
+```
+
+Formatting cleanup is tracked separately from functional lint/build failures so old Prettier debt does not hide real regressions.
+
+## Website intake
+
+The homepage can submit inbound website requests directly to the Singh Dynamics API Worker.
+
+Set this public build variable on the production site deployment:
+
+```text
+VITE_INTAKE_URL=https://<singh-dynamics-worker-host>/intake
+```
+
+This value is an endpoint URL, not a secret. The Worker only accepts browser requests from `https://singhdynamics.com` and `https://www.singhdynamics.com`.
+
+If `VITE_INTAKE_URL` is absent, the site keeps the phone and email fallback instead of showing a broken form.
+
+## Deployment
+
+The production site is `https://singhdynamics.com/`. Keep deployment-specific credentials in the hosting platform or GitHub secrets. Do not commit API keys, tokens, or credentials.

@@ -1,0 +1,25 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - 'agent/intake-and-site-cleanup'
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-audit --no-fund
+      - name: Lint code (ignore existing Prettier debt)
+        run: "npx eslint . --rule 'prettier/prettier: off'"
+      - run: npm run build
